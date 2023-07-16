@@ -1,0 +1,32 @@
+{
+  "name": "cognito-sst",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst dev",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "my-remix-app": "pnpm --filter my-remix-app dev",
+    "set-node-v": "pnpm env use --global 18"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^16.1.0",
+    "aws-cdk-lib": "2.84.0",
+    "constructs": "10.1.156",
+    "sst": "2.21.7",
+    "typescript": "^5.1.6"
+  },
+  "workspaces": [
+    "packages/*",
+    "packages/my-remix-app/*"
+  ],
+  "pnpm": {
+    "patchedDependencies": {
+      "sst@2.21.7": "patches/sst@2.21.7.patch"
+    }
+  }
+}

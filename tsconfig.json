@@ -1,0 +1,7 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "exclude": ["packages", "packages/my-remix-app"],
+  "compilerOptions": {
+    "moduleResolution": "node"
+  }
+}
