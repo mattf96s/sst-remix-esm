@@ -4,6 +4,8 @@ A barebones ESM example of a [Remix](https://remix.run/) project running deploye
 
 It uses PNPM's patch capabilities to convert SST's deployment config from CJS to ESM. The [express server](packages/my-remix-app/server.js) is also used rather than the default Remix server. 
 
+Thanks to [xHomu](https://github.com/xHomu/remix-v2-server) for the ESM server implementation.
+
 ## Instructions
 
 First go to [sst.config.ts](sst.config.ts) and set your AWS region and AWS profile (or even better, follow these setup [instructions](https://docs.sst.dev/setting-up-aws)).
