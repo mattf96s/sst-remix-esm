@@ -7,7 +7,7 @@ export default {
       stage: "dev", // your local stage name
       name: "remix-sst-esm",
       region: "eu-west-1", // change to your preferred region
-      profile: "YOUR_AWS_PROFILE", // change to your preferred AWS profile so you don't deploy to the wrong account
+      //profile: "YOUR_AWS_PROFILE", // change to your preferred AWS profile so you don't deploy to the wrong account
     };
   },
   stacks(app) {
