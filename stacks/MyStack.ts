@@ -5,6 +5,9 @@ export function API({ stack }: StackContext) {
     path: "packages/my-remix-app/",
     runtime: "nodejs18.x",
     edge: false,
+    nodejs: {
+      format: "esm",
+    },
   });
 
   stack.addOutputs({
