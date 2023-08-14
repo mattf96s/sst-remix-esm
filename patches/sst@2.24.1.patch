@@ -1,0 +1,48 @@
+diff --git a/.prettierignore b/.prettierignore
+new file mode 100644
+index 0000000000000000000000000000000000000000..f59ec20aabf5842d237244ece8c81ab184faeac1
+--- /dev/null
++++ b/.prettierignore
+@@ -0,0 +1 @@
++*
+\ No newline at end of file
+diff --git a/constructs/RemixSite.js b/constructs/RemixSite.js
+index b979e493b1e4311bfa573de2eccb75c9d40903d6..2f806bca3b4884b22698be464f44bbbfe66c684f 100644
+--- a/constructs/RemixSite.js
++++ b/constructs/RemixSite.js
+@@ -27,7 +27,7 @@ export class RemixSite extends SsrSite {
+             assetsBuildDirectory: "public/build",
+             publicPath: "/build/",
+             serverBuildPath: "build/index.js",
+-            serverModuleFormat: "cjs",
++            serverModuleFormat: "esm",
+             serverPlatform: "node",
+         };
+         // Validate config path
+@@ -36,7 +36,7 @@ export class RemixSite extends SsrSite {
+             throw new Error(`Could not find "remix.config.js" at expected path "${configPath}".`);
+         }
+         // Load config
+-        const userConfig = require(configPath);
++        const userConfig = {};
+         const config = {
+             ...configDefaults,
+             ...userConfig,
+@@ -101,7 +101,7 @@ export class RemixSite extends SsrSite {
+             memorySize,
+             timeout,
+             nodejs: {
+-                format: "cjs",
++                format: "esm",
+                 ...nodejs,
+                 esbuild: {
+                     ...esbuild,
+@@ -128,7 +128,7 @@ export class RemixSite extends SsrSite {
+             environment,
+             permissions,
+             nodejs: {
+-                format: "cjs",
++                format: "esm",
+                 ...nodejs,
+                 esbuild: {
+                     ...esbuild,
