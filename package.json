@@ -1,5 +1,5 @@
 {
-  "name": "cognito-sst",
+  "name": "remix-sst-esm",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -11,13 +11,14 @@
     "console": "sst console",
     "typecheck": "tsc --noEmit",
     "my-remix-app": "pnpm --filter my-remix-app dev",
-    "set-node-v": "pnpm env use --global 18"
+    "set-node-v": "pnpm env use --global 18",
+    "sso": "aws sso login"
   },
   "devDependencies": {
     "@tsconfig/node16": "^16.1.0",
-    "aws-cdk-lib": "2.84.0",
-    "constructs": "10.1.156",
-    "sst": "2.21.7",
+    "aws-cdk-lib": "2.91.0",
+    "constructs": "10.2.69",
+    "sst": "2.24.1",
     "typescript": "^5.1.6"
   },
   "workspaces": [
@@ -26,7 +27,7 @@
   ],
   "pnpm": {
     "patchedDependencies": {
-      "sst@2.21.7": "patches/sst@2.21.7.patch"
+      "sst@2.24.1": "patches/sst@2.24.1.patch"
     }
   }
 }

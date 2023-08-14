@@ -1,5 +1,5 @@
 {
-  "name": "@cognito-sst/core",
+  "name": "@remix-sst-esm/core",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
   "devDependencies": {
     "vitest": "^0.33.0",
     "@types/node": "^20.4.2",
-    "sst": "2.21.7"
+    "sst": "2.24.1"
   },
   "dependencies": {
     "zod": "^3.21.4"

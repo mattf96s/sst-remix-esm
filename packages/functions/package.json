@@ -1,5 +1,5 @@
 {
-  "name": "@cognito-sst/functions",
+  "name": "@remix-sst-esm/functions",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,6 +10,6 @@
     "@types/node": "^20.4.2",
     "@types/aws-lambda": "^8.10.119",
     "vitest": "^0.33.0",
-    "sst": "2.21.7"
+    "sst": "2.24.1"
   }
 }
